@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def plot_univariate(data, column, title=None):
-    plt.figure(figsize=(8, 14))
+    plt.figure(figsize=(10, 6))
     sns.histplot(data[column], kde=True, bins=30)
     plt.title(title or f"Univariate Analysis of [{column}")
     plt.xlabel(column)
