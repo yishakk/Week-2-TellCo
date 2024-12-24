@@ -5,9 +5,9 @@ def clean_data_1(data):
 
     data = data.drop_duplicates()
 
-    data = data.dropna(subset=['column1', 'column2'], how='any')
+    data = data.dropna(subset=['TCP DL Retrans. Vol (Bytes)', 'Avg RTT DL (ms)', 'Avg Bearer TP DL (kbps)'], how='any')
 
-    data.fillna(value={'column1': 0, 'column2': 0}, inplace=True)
+    data.fillna(value={'TCP DL Retrans. Vol (Bytes)': 0, 'Avg RTT DL (ms)': 0, 'Avg Bearer TP DL (kbps)':0}, inplace=True)
 
     print("Data Cleaning Done.")
     return data
